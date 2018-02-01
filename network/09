@@ -1,0 +1,1 @@
+Seul 2 des IP du DNS du domaine 42.fr apparaissent quand on interroge depuis un DNS externe, cependant, celles-ci sont similaires a 2 des IP trouvees depuis interrogation locale. Les deux adresses n'apparaissant pas sont de Classe A, soit privee.

@@ -1,0 +1,11 @@
+#! /bin/bash
+echo "#! /bin/bash
+if [ -e /home/pcahier/oldcrontab ]; then
+	md5sum /etc/crontab > /home/pcahier/crontab
+	if [ ! /home/pcahier/crontab = /home/pcahier/oldcrontab ]; then
+		echo 'Cron altered' | mail -s 'Debpc cron' root
+	fi
+fi
+md5sum /etc/crontab > /home/pcahier/oldcrontab" > /home/pcahier/scriptcron.sh
+chmod 777 /home/pcahier/scriptcron.sh
+echo "@daily /home/pcahier/scriptcron.sh" >> /var/spool/cron/crontabs/root

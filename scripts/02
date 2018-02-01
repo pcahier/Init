@@ -1,0 +1,2 @@
+#! /bin/bash
+echo "0 4 * * 0 apt-get -y update && sudo apt-get -y dist-upgrade >> /var/log/update_script.log" >> /var/spool/cron/crontabs/root
